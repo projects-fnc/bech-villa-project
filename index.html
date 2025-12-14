@@ -1,93 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Beach Villa Paradise</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeachVilla Retreat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Aesthetic font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- HEADER / NAV -->
-    <header class="site-header">
-        <nav class="navbar">
-            <div class="logo">BeachVilla</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#amenities">Amenities</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#booking">Booking</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="book-btn">Book Now</button>
-        </nav>
-    </header>
 
-    <!-- HERO -->
-    <section id="home" class="hero-section">
-        <div class="hero-content">
-            <h1>Sun, Sea & Serenity</h1>
-            <p>Your perfect beachside escape starts here.</p>
-            <button onclick="scrollToSection('booking')">Reserve Your Stay</button>
+  <!-- HEADER / NAV -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">BeachVilla Retreat</h1>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#villas">Villas</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Booking</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Your Private Paradise by the Sea</h2>
+      <p>Unwind. Relax. Meet the horizon.</p>
+      <a href="#booking" class="btn-primary">Book Your Stay</a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2>About BeachVilla Retreat</h2>
+      <p>Welcome to BeachVilla Retreat — a serene escape nestled by crystal waters with soft sands at your doorstep. Experience comfortable luxury and peaceful mornings in our thoughtfully designed villas.</p>
+    </div>
+  </section>
+
+  <!-- VILLAS SHOWCASE -->
+  <section id="villas" class="section villas">
+    <div class="container">
+      <h2>Our Villas</h2>
+      <div class="villa-cards">
+        <div class="villa-card">
+          <img src="images/villa1.jpg" alt="Villa A">
+          <h3>Tropical Ocean Villa</h3>
+          <p>Private pool, sea views & high-end comfort.</p>
         </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="about-section">
-        <h2>About Our Villa</h2>
-        <p>Experience beachfront luxury with panoramic sea views, elegant interiors, and unmatched comfort. Our villa offers spacious rooms, private pools, and premium amenities for an unforgettable holiday.</p>
-        <img src="images/villa-about.jpg" alt="Aesthetic villa shot" />
-    </section>
-
-    <!-- AMENITIES -->
-    <section id="amenities" class="amenities-section">
-        <h2>What We Offer</h2>
-        <div class="amenity-cards">
-            <div class="card"><img src="images/icons/pool.png" alt="Pool"><h3>Private Pool</h3></div>
-            <div class="card"><img src="images/icons/beach.png" alt="Beach"><h3>Beach Access</h3></div>
-            <div class="card"><img src="images/icons/wifi.png" alt="WiFi"><h3>Free Wi-Fi</h3></div>
-            <div class="card"><img src="images/icons/dining.png" alt="Dining"><h3>Gourmet Dining</h3></div>
+        <div class="villa-card">
+          <img src="images/villa2.jpg" alt="Villa B">
+          <h3>Sunset Beach Suite</h3>
+          <p>Sunset views with open-air lounge and patio.</p>
         </div>
-    </section>
-
-    <!-- GALLERY -->
-    <section id="gallery" class="gallery-section">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-            <img src="images/gallery1.jpg" alt="Beach villa interior">
-            <img src="images/gallery2.jpg" alt="Ocean sunset view">
-            <img src="images/gallery3.jpg" alt="Private pool view">
-            <img src="images/gallery4.jpg" alt="Aesthetic beach shot">
+        <div class="villa-card">
+          <img src="images/villa3.jpg" alt="Villa C">
+          <h3>Seaside Garden Villa</h3>
+          <p>Garden view with direct beach access.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- BOOKING -->
-    <section id="booking" class="booking-section">
-        <h2>Book Your Stay</h2>
-        <form id="bookingForm" class="booking-form">
-            <input type="text" placeholder="Full Name" required name="name" />
-            <input type="email" placeholder="Email Address" required name="email" />
-            <input type="date" placeholder="Check-In" required name="checkin" />
-            <input type="date" placeholder="Check-Out" required name="checkout" />
-            <input type="number" placeholder="Guests" min="1" max="10" name="guests" />
-            <button type="submit">Submit Request</button>
-        </form>
-        <p class="booking-msg" id="bookingMsg"></p>
-    </section>
+  <!-- GALLERY -->
+  <section id="gallery" class="section gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="images/gallery1.jpg" alt="Beach View">
+        <img src="images/gallery2.jpg" alt="Villa Interior">
+        <img src="images/gallery3.jpg" alt="Sunset Pool">
+        <img src="images/gallery4.jpg" alt="Coastal View">
+      </div>
+    </div>
+  </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="contact-section">
-        <h2>Contact Us</h2>
-        <p>Email: hello@beachvilla.com | Phone: +91 98765 43210</p>
-    </section>
+  <!-- BOOKING ENGINE -->
+  <section id="booking" class="section booking">
+    <div class="container">
+      <h2>Check Availability</h2>
+      <!-- Replace this with your booking engine iframe/widget -->
+      <div class="booking-widget">
+        <iframe src="about:blank" title="Booking Engine" frameborder="0"></iframe>
+      </div>
+      <p class="booking-note">*Connect your booking engine here — iframe or API from your provider.</p>
+    </div>
+  </section>
 
-    <footer class="site-footer">
-        <small>&copy; 2025 Beach Villa Paradise</small>
-    </footer>
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" rows="4"></textarea>
+        <button class="btn-primary" type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 BeachVilla Retreat | All Rights Reserved</p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
