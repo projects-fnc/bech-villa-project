@@ -1,115 +1,1360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BeachVilla Retreat</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Aesthetic font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vadanapilly Beach Villa | Luxury Coastal Retreat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <style>
+        :root {
+            --ocean-blue: #4BE24B;
+            --coral: #F44F5F;
+            --seafoam: #77A846;
+            --lavender: #B886B1;
+            --forest: #2F5D50;
+            --sand: #A88C3B;
+            --light-sand: #F9F6F0;
+            --white: #FFFFFF;
+            --text-dark: #2C3E50;
+            --text-light: #5D6D7E;
+            --shadow: rgba(0, 0, 0, 0.08);
+            --shadow-hover: rgba(0, 0, 0, 0.12);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-sand);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--forest);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 255, 255, 0.98);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 20px var(--shadow);
+            padding: 18px 0;
+            transition: all 0.4s ease;
+        }
+        
+        header.scrolled {
+            padding: 12px 0;
+            box-shadow: 0 6px 25px var(--shadow-hover);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--forest);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+        
+        .logo i {
+            color: var(--coral);
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 35px;
+            position: relative;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--coral);
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--coral), var(--ocean-blue));
+            left: 0;
+            bottom: -6px;
+            transition: width 0.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+            border-radius: 2px;
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .book-now-btn {
+            background: linear-gradient(135deg, var(--ocean-blue), var(--seafoam));
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            border: none;
+            box-shadow: 0 4px 15px rgba(75, 226, 75, 0.2);
+        }
+        
+        .book-now-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(75, 226, 75, 0.3);
+            color: white;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            font-size: 26px;
+            color: var(--forest);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu-btn:hover {
+            transform: rotate(90deg);
+            color: var(--coral);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), 
+                        url('https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            color: var(--text-dark);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234be24b' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.3;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1.2s ease-out 0.3s both;
+        }
+        
+        .hero h1 {
+            font-size: 68px;
+            margin-bottom: 20px;
+            color: var(--forest);
+            line-height: 1.1;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .hero p {
+            font-size: 22px;
+            margin-bottom: 35px;
+            color: var(--text-light);
+            font-weight: 300;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--coral), var(--lavender));
+            color: white;
+            padding: 18px 45px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 20px rgba(244, 79, 95, 0.25);
+            border: none;
+        }
+        
+        .hero-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(244, 79, 95, 0.35);
+            color: white;
+        }
+        
+        .wave-decoration {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+        }
+        
+        .wave-decoration svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 80px;
+            transform: rotate(180deg);
+        }
+        
+        .wave-decoration .shape-fill {
+            fill: var(--light-sand);
+        }
+        
+        /* Sections Common Styling */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 70px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 46px;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--ocean-blue), var(--seafoam));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 25px auto 0;
+            font-size: 18px;
+            font-weight: 300;
+        }
+        
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px var(--shadow);
+            position: relative;
+            transform: perspective(1000px) rotateY(-5deg);
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+        }
+        
+        .about-image:hover {
+            transform: perspective(1000px) rotateY(0deg);
+            box-shadow: 0 25px 50px var(--shadow-hover);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.8s ease;
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .about-text h3 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            color: var(--forest);
+        }
+        
+        .about-text p {
+            margin-bottom: 25px;
+            color: var(--text-light);
+            font-size: 17px;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(75, 226, 75, 0.08), rgba(119, 168, 70, 0.08));
+            border-left: 4px solid var(--ocean-blue);
+            padding: 25px;
+            border-radius: 0 10px 10px 0;
+            margin-top: 30px;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            background-color: rgba(249, 246, 240, 0.5);
+        }
+        
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            height: 280px;
+            box-shadow: 0 10px 20px var(--shadow);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px var(--shadow-hover);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Amenities Section */
+        .amenities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .amenity-card {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 25px var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .amenity-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--ocean-blue), var(--seafoam));
+            z-index: 2;
+        }
+        
+        .amenity-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px var(--shadow-hover);
+        }
+        
+        .amenity-card:hover:before {
+            height: 100%;
+            opacity: 0.05;
+            transition: height 0.4s ease;
+        }
+        
+        .amenity-icon {
+            font-size: 54px;
+            margin-bottom: 25px;
+            color: var(--ocean-blue);
+            transition: transform 0.5s ease, color 0.3s ease;
+        }
+        
+        .amenity-card:hover .amenity-icon {
+            transform: scale(1.2) rotate(5deg);
+            color: var(--coral);
+        }
+        
+        .amenity-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                        url('https://images.unsplash.com/photo-1514888286974-6d03bde4ba48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .testimonials-slider {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px var(--shadow);
+            text-align: center;
+            margin: 0 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .testimonial-card.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .testimonial-text {
+            font-size: 20px;
+            font-style: italic;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.8;
+            position: relative;
+        }
+        
+        .testimonial-text:before, .testimonial-text:after {
+            content: '"';
+            font-size: 60px;
+            color: var(--lavender);
+            opacity: 0.3;
+            position: absolute;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .testimonial-text:before {
+            top: -30px;
+            left: -20px;
+        }
+        
+        .testimonial-text:after {
+            bottom: -50px;
+            right: -20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--forest);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .testimonial-rating {
+            color: var(--sand);
+            margin-top: 10px;
+            font-size: 20px;
+        }
+        
+        .testimonial-nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 15px;
+        }
+        
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-dot.active {
+            background-color: var(--ocean-blue);
+            transform: scale(1.3);
+        }
+        
+        /* Booking Section */
+        .booking-section {
+            background: linear-gradient(135deg, rgba(75, 226, 75, 0.05), rgba(244, 79, 95, 0.05));
+            border-radius: 30px;
+            margin: 50px auto;
+            max-width: 1100px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+        
+        .booking-container {
+            padding: 70px 50px;
+        }
+        
+        .booking-form {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+        
+        .form-group {
+            text-align: left;
+        }
+        
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            color: var(--forest);
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 16px 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--ocean-blue);
+            box-shadow: 0 0 0 3px rgba(75, 226, 75, 0.1);
+        }
+        
+        .booking-btn {
+            background: linear-gradient(135deg, var(--forest), var(--seafoam));
+            color: white;
+            border: none;
+            padding: 18px 45px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 20px rgba(47, 93, 80, 0.2);
+            width: 100%;
+        }
+        
+        .booking-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(47, 93, 80, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--forest);
+            color: white;
+            padding: 80px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--ocean-blue), var(--coral), var(--lavender));
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .footer-column h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: white;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .footer-links a:hover {
+            color: var(--ocean-blue);
+            transform: translateX(5px);
+        }
+        
+        .contact-info {
+            list-style: none;
+        }
+        
+        .contact-info li {
+            margin-bottom: 18px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-info i {
+            color: var(--ocean-blue);
+            margin-right: 15px;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 20px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--ocean-blue);
+            color: white;
+            transform: translateY(-8px) rotate(10deg);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 15px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(75, 226, 75, 0.2); }
+            70% { box-shadow: 0 0 0 15px rgba(75, 226, 75, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(75, 226, 75, 0); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .amenities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .booking-form {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero h1 {
+                font-size: 54px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 25px;
+                box-shadow: 0 15px 30px var(--shadow);
+                border-radius: 0 0 15px 15px;
+                z-index: 100;
+            }
+            
+            .nav-links.active {
+                display: flex;
+                animation: fadeInUp 0.5s ease;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .booking-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .amenities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 42px;
+            }
+            
+            .section-title h2 {
+                font-size: 38px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 32px;
+            }
+            
+            .booking-container {
+                padding: 50px 25px;
+            }
+            
+            .testimonial-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-  <!-- HEADER / NAV -->
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">BeachVilla Retreat</h1>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#villas">Villas</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#booking">Booking</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Your Private Paradise by the Sea</h2>
-      <p>Unwind. Relax. Meet the horizon.</p>
-      <a href="#booking" class="btn-primary">Book Your Stay</a>
-    </div>
-  </section>
-
-  <!-- ABOUT SECTION -->
-  <section id="about" class="section about">
-    <div class="container">
-      <h2>About BeachVilla Retreat</h2>
-      <p>Welcome to BeachVilla Retreat — a serene escape nestled by crystal waters with soft sands at your doorstep. Experience comfortable luxury and peaceful mornings in our thoughtfully designed villas.</p>
-    </div>
-  </section>
-
-  <!-- VILLAS SHOWCASE -->
-  <section id="villas" class="section villas">
-    <div class="container">
-      <h2>Our Villas</h2>
-      <div class="villa-cards">
-        <div class="villa-card">
-          <img src="images/villa1.jpg" alt="Villa A">
-          <h3>Tropical Ocean Villa</h3>
-          <p>Private pool, sea views & high-end comfort.</p>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo"><i class="fas fa-umbrella-beach"></i> Vadanapilly Beach Villa</a>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#amenities">Amenities</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                    <li><a href="#contact" class="book-now-btn">Book Now</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="villa-card">
-          <img src="images/villa2.jpg" alt="Villa B">
-          <h3>Sunset Beach Suite</h3>
-          <p>Sunset views with open-air lounge and patio.</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Experience Coastal Luxury at Vadanapilly</h1>
+                <p>Where the golden sands meet azure waters, our exclusive beach villa offers an unparalleled retreat designed for relaxation, rejuvenation, and unforgettable moments.</p>
+                <a href="#booking" class="hero-btn floating">Reserve Your Paradise</a>
+            </div>
         </div>
-        <div class="villa-card">
-          <img src="images/villa3.jpg" alt="Villa C">
-          <h3>Seaside Garden Villa</h3>
-          <p>Garden view with direct beach access.</p>
+        <div class="wave-decoration">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="section gallery">
-    <div class="container">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="images/gallery1.jpg" alt="Beach View">
-        <img src="images/gallery2.jpg" alt="Villa Interior">
-        <img src="images/gallery3.jpg" alt="Sunset Pool">
-        <img src="images/gallery4.jpg" alt="Coastal View">
-      </div>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Welcome to Vadanapilly</h2>
+                <p>Discover our coastal sanctuary where luxury meets natural beauty in perfect harmony.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Vadanapilly Beach Villa">
+                </div>
+                <div class="about-text">
+                    <h3>Your Coastal Sanctuary Awaits</h3>
+                    <p>Nestled along a pristine stretch of Kerala's coastline, Vadanapilly Beach Villa offers an exclusive retreat where the rhythm of ocean waves becomes your daily soundtrack. Our property harmoniously blends traditional Kerala architecture with contemporary luxury.</p>
+                    <p>Each villa is meticulously designed to maximize ocean views while providing utmost privacy and comfort. From the moment you arrive, you'll be enveloped in an atmosphere of serenity and sophistication.</p>
+                    <p>Our dedicated team is committed to creating personalized experiences, whether you're celebrating a special occasion, seeking adventure, or simply needing to disconnect and recharge.</p>
+                    <div class="highlight-box">
+                        <p><i class="fas fa-quote-left" style="color: var(--ocean-blue); margin-right: 10px;"></i>Vadanapilly isn't just a destination—it's an experience that stays with you long after you return home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- BOOKING ENGINE -->
-  <section id="booking" class="section booking">
-    <div class="container">
-      <h2>Check Availability</h2>
-      <!-- Replace this with your booking engine iframe/widget -->
-      <div class="booking-widget">
-        <iframe src="about:blank" title="Booking Engine" frameborder="0"></iframe>
-      </div>
-      <p class="booking-note">*Connect your booking engine here — iframe or API from your provider.</p>
-    </div>
-  </section>
+    <!-- Gallery Section -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Visual Journey</h2>
+                <p>Explore the breathtaking beauty of Vadanapilly through our gallery</p>
+            </div>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Villa Exterior">
+                    <div class="gallery-overlay">
+                        <h4>Oceanfront Villa</h4>
+                        <p>Direct beach access</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1158&q=80" alt="Luxury Bedroom">
+                    <div class="gallery-overlay">
+                        <h4>Master Suite</h4>
+                        <p>King bed with ocean view</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1558036117-15e82a2c9a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Infinity Pool">
+                    <div class="gallery-overlay">
+                        <h4>Infinity Pool</h4>
+                        <p>Overlooking the Arabian Sea</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Dining Area">
+                    <div class="gallery-overlay">
+                        <h4>Al Fresco Dining</h4>
+                        <p>Private chef experiences</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Spa">
+                    <div class="gallery-overlay">
+                        <h4>Wellness Spa</h4>
+                        <p>Ayurvedic treatments</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Sunset View">
+                    <div class="gallery-overlay">
+                        <h4>Golden Hour</h4>
+                        <p>Spectacular sunsets</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section contact">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Message" rows="4"></textarea>
-        <button class="btn-primary" type="submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <!-- Amenities Section -->
+    <section class="section" id="amenities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Premium Amenities</h2>
+                <p>Every detail crafted for your comfort and enjoyment</p>
+            </div>
+            <div class="amenities-grid">
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <h3>Infinity Pool</h3>
+                    <p>A stunning infinity-edge pool that appears to merge with the ocean horizon, with comfortable loungers and poolside service.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3>Wellness Spa</h3>
+                    <p>Authentic Ayurvedic treatments and wellness therapies in our serene spa overlooking the ocean.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Private Chef</h3>
+                    <p>Enjoy customized culinary experiences with our private chef specializing in Kerala cuisine and international dishes.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Beach Access</h3>
+                    <p>Direct, private access to pristine sandy beaches with complimentary sun loungers, umbrellas, and towels.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3>24/7 Concierge</h3>
+                    <p>Personalized concierge service to arrange excursions, transportation, and special experiences.</p>
+                </div>
+                <div class="amenity-card">
+                    <div class="amenity-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>High-Speed WiFi</h3>
+                    <p>Seamless high-speed internet throughout the property with dedicated workspaces for remote work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 BeachVilla Retreat | All Rights Reserved</p>
-  </footer>
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Guest Experiences</h2>
+                <p>Discover what our guests say about their stay at Vadanapilly</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-text">
+                        Our stay at Vadanapilly Beach Villa was nothing short of magical. The attention to detail, breathtaking views, and exceptional service created the perfect vacation. Waking up to the sound of waves and enjoying sunset from our private balcony were moments we'll cherish forever.
+                    </div>
+                    <div class="testimonial-author">— Priya & Rajesh Kumar</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The perfect blend of luxury and nature. The villa's design harmonizes so beautifully with its surroundings. The staff went above and beyond to make our anniversary special with a private dinner on the beach. We can't wait to return!
+                    </div>
+                    <div class="testimonial-author">— Thomas & Sarah Chen</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        As a family with two young children, we appreciated how child-friendly the villa was while still maintaining its luxury feel. The infinity pool was a highlight, and the private beach meant we could relax while the kids played safely nearby.
+                    </div>
+                    <div class="testimonial-author">— The Fernandez Family</div>
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-index="0"></div>
+                    <div class="testimonial-dot" data-index="1"></div>
+                    <div class="testimonial-dot" data-index="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="js/main.js"></script>
+    <!-- Booking Section -->
+    <section class="section" id="booking">
+        <div class="container">
+            <div class="section-title">
+                <h2>Plan Your Escape</h2>
+                <p>Begin your journey to coastal luxury. Check availability and reserve your dates.</p>
+            </div>
+            <div class="booking-section">
+                <div class="booking-container">
+                    <form class="booking-form" id="bookingForm">
+                        <div class="form-group">
+                            <label for="checkin">Check-In Date</label>
+                            <input type="date" id="checkin" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkout">Check-Out Date</label>
+                            <input type="date" id="checkout" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Guests</label>
+                            <select id="guests" class="form-control" required>
+                                <option value="1">1 Guest</option>
+                                <option value="2" selected>2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5+">5+ Guests</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="villaType">Villa Type</label>
+                            <select id="villaType" class="form-control" required>
+                                <option value="ocean-view">Ocean View Suite</option>
+                                <option value="beachfront">Beachfront Villa</option>
+                                <option value="premium-suite">Premium Suite</option>
+                                <option value="executive">Executive Villa</option>
+                            </select>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="specialRequests">Special Requests</label>
+                            <textarea id="specialRequests" class="form-control" rows="4" placeholder="Any special requirements, celebrations, or requests..."></textarea>
+                        </div>
+                        <div class="form-group full-width">
+                            <button type="submit" class="booking-btn">Check Availability & Reserve</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Vadanapilly Beach Villa</h3>
+                    <p>Experience the ultimate beachfront luxury at our exclusive villa retreat. Where every moment is designed for relaxation and rejuvenation.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Villa</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#amenities">Amenities</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#booking">Booking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Vadanapilly Beach Road, Thrissur,<br>Kerala 680567, India</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>reservations@vadanapillyvilla.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for exclusive offers, seasonal promotions, and villa updates.</p>
+                    <form id="newsletterForm">
+                        <input type="email" class="form-control" placeholder="Your email address" required style="margin-bottom: 12px;">
+                        <button type="submit" class="booking-btn" style="padding: 12px 20px; width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Vadanapilly Beach Villa. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--coral);"></i> for luxury travelers</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-bars');
+            this.querySelector('i').classList.toggle('fa-times');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.querySelector('.nav-links').classList.remove('active');
+                document.querySelector('.mobile-menu-btn i').classList.remove('fa-times');
+                document.querySelector('.mobile-menu-btn i').classList.add('fa-bars');
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if(window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            // Animate sections on scroll
+            animateOnScroll();
+        });
+        
+        // Testimonials Slider
+        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        let currentTestimonial = 0;
+        
+        function showTestimonial(index) {
+            testimonialCards.forEach(card => card.classList.remove('active'));
+            testimonialDots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonialCards[index].classList.add('active');
+            testimonialDots[index].classList.add('active');
+            currentTestimonial = index;
+        }
+        
+        testimonialDots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                const index = parseInt(this.getAttribute('data-index'));
+                showTestimonial(index);
+            });
+        });
+        
+        // Auto-rotate testimonials
+        setInterval(() => {
+            let nextIndex = (currentTestimonial + 1) % testimonialCards.length;
+            showTestimonial(nextIndex);
+        }, 5000);
+        
+        // Booking Form Handling
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const checkin = document.getElementById('checkin').value;
+            const checkout = document.getElementById('checkout').value;
+            const guests = document.getElementById('guests').value;
+            const villaType = document.getElementById('villaType').value;
+            
+            // Animation for button
+            const submitBtn = this.querySelector('.booking-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Processing...';
+            submitBtn.style.opacity = '0.8';
+            
+            setTimeout(() => {
+                // In a real implementation, this would connect to a booking engine API
+                // For demonstration, we'll show a confirmation message
+                alert(`Thank you for your booking request!\n\nCheck-In: ${checkin}\nCheck-Out: ${checkout}\nGuests: ${guests}\nVilla Type: ${document.getElementById('villaType').options[document.getElementById('villaType').selectedIndex].text}\n\nYou would now be redirected to our secure booking partner to complete your reservation.`);
+                
+                // Reset button
+                submitBtn.textContent = originalText;
+                submitBtn.style.opacity = '1';
+                
+                // In practice, you would redirect to a booking engine like:
+                // window.location.href = `https://booking-engine.com/reserve?checkin=${checkin}&checkout=${checkout}&guests=${guests}&type=${villaType}`;
+            }, 1500);
+        });
+        
+        // Newsletter Form Handling
+        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Animation
+            const submitBtn = this.querySelector('.booking-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Subscribing...';
+            
+            setTimeout(() => {
+                alert(`Thank you for subscribing with ${email}! You'll receive our exclusive offers soon.`);
+                submitBtn.textContent = originalText;
+                this.reset();
+            }, 1000);
+        });
+        
+        // Set minimum date for check-in to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('checkin').min = today;
+        
+        // Update checkout min date when checkin changes
+        document.getElementById('checkin').addEventListener('change', function() {
+            document.getElementById('checkout').min = this.value;
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animation on scroll function
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.amenity-card, .gallery-item, .section-title');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if(elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        // Initialize animation styles
+        document.querySelectorAll('.amenity-card, .gallery-item').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        });
+        
+        // Initial animation on page load
+        window.addEventListener('load', () => {
+            animateOnScroll();
+        });
+    </script>
 </body>
 </html>
