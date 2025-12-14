@@ -6,7 +6,6 @@
     <title>Vadanapilly Beach Villa | Luxury Coastal Retreat</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
     <style>
         :root {
             --ocean-blue: #4BE24B;
@@ -44,7 +43,7 @@
         h1, h2, h3, h4, h5 {
             font-family: 'Playfair Display', serif;
             font-weight: 600;
-            color: var(--forest);
+            color: var(--ocean-blue); /* Changed to ocean blue */
         }
         
         .container {
@@ -54,7 +53,7 @@
             padding: 0 20px;
         }
         
-        /* Header & Navigation */
+        /* Header & Navigation - Enhanced */
         header {
             background-color: rgba(255, 255, 255, 0.98);
             position: fixed;
@@ -80,7 +79,7 @@
             font-family: 'Playfair Display', serif;
             font-size: 32px;
             font-weight: 700;
-            color: var(--forest);
+            color: var(--ocean-blue); /* Changed to ocean blue */
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -109,7 +108,7 @@
         
         .nav-links a {
             text-decoration: none;
-            color: var(--text-dark);
+            color: var(--ocean-blue); /* Changed to ocean blue */
             font-weight: 500;
             font-size: 16px;
             transition: color 0.3s ease;
@@ -157,7 +156,7 @@
         .mobile-menu-btn {
             display: none;
             font-size: 26px;
-            color: var(--forest);
+            color: var(--ocean-blue); /* Changed to ocean blue */
             cursor: pointer;
             transition: transform 0.3s ease;
         }
@@ -167,31 +166,19 @@
             color: var(--coral);
         }
         
-        /* Hero Section */
+        /* Hero Section - Enhanced */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)), 
-                        url('https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), 
+                        url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
             align-items: center;
-            color: var(--text-dark);
+            color: white;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%234be24b' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-            opacity: 0.3;
-            z-index: 0;
         }
         
         .hero-content {
@@ -199,22 +186,22 @@
             margin: 0 auto;
             padding: 0 20px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
             animation: fadeInUp 1.2s ease-out 0.3s both;
         }
         
         .hero h1 {
             font-size: 68px;
             margin-bottom: 20px;
-            color: var(--forest);
+            color: white; /* Keep white for contrast */
             line-height: 1.1;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
         
         .hero p {
             font-size: 22px;
             margin-bottom: 35px;
-            color: var(--text-light);
+            color: rgba(255, 255, 255, 0.9);
             font-weight: 300;
             max-width: 700px;
             margin-left: auto;
@@ -248,6 +235,7 @@
             width: 100%;
             overflow: hidden;
             line-height: 0;
+            z-index: 1;
         }
         
         .wave-decoration svg {
@@ -279,6 +267,7 @@
             margin-bottom: 15px;
             position: relative;
             display: inline-block;
+            color: var(--ocean-blue); /* Changed to ocean blue */
         }
         
         .section-title h2:after {
@@ -301,7 +290,7 @@
             font-weight: 300;
         }
         
-        /* About Section */
+        /* About Section - Updated with new beach image */
         .about-content {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -325,7 +314,8 @@
         
         .about-image img {
             width: 100%;
-            height: auto;
+            height: 500px;
+            object-fit: cover;
             transition: transform 0.8s ease;
         }
         
@@ -336,7 +326,7 @@
         .about-text h3 {
             font-size: 36px;
             margin-bottom: 25px;
-            color: var(--forest);
+            color: var(--ocean-blue); /* Changed to ocean blue */
         }
         
         .about-text p {
@@ -354,7 +344,7 @@
             animation: pulse 2s infinite;
         }
         
-        /* Gallery Section */
+        /* Gallery Section - Updated with better infinity pool image */
         .gallery-section {
             background-color: rgba(249, 246, 240, 0.5);
         }
@@ -409,95 +399,159 @@
             opacity: 1;
         }
         
-        /* Amenities Section */
-        .amenities-grid {
+        /* Premium Amenities Section - Complete Redesign */
+        .amenities-section {
+            background: linear-gradient(135deg, rgba(75, 226, 75, 0.03), rgba(244, 79, 95, 0.03));
+            padding: 100px 0;
+            overflow: hidden;
+        }
+        
+        .amenities-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
+            perspective: 1000px;
         }
         
-        .amenity-card {
-            background-color: white;
+        .amenity-card-new {
+            background: white;
+            border-radius: 20px;
             padding: 40px 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 10px 25px var(--shadow);
-            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            z-index: 1;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(75, 226, 75, 0.1);
+            transform-style: preserve-3d;
+            transform: translateZ(0);
         }
         
-        .amenity-card:before {
+        .amenity-card-new:hover {
+            transform: translateY(-15px) translateZ(20px);
+            box-shadow: 0 25px 50px rgba(75, 226, 75, 0.15);
+            border-color: rgba(75, 226, 75, 0.3);
+        }
+        
+        .amenity-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--ocean-blue), var(--seafoam));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            position: relative;
+            transition: all 0.4s ease;
+        }
+        
+        .amenity-card-new:hover .amenity-icon-wrapper {
+            transform: rotate(15deg) scale(1.1);
+            background: linear-gradient(135deg, var(--coral), var(--lavender));
+        }
+        
+        .amenity-icon-wrapper i {
+            font-size: 36px;
+            color: white;
+        }
+        
+        .amenity-card-new h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+            color: var(--ocean-blue); /* Changed to ocean blue */
+        }
+        
+        .amenity-card-new p {
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.7;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .amenity-card-new::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 5px;
-            background: linear-gradient(to right, var(--ocean-blue), var(--seafoam));
-            z-index: 2;
+            background: linear-gradient(to right, var(--ocean-blue), var(--seafoam), var(--coral));
         }
         
-        .amenity-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 40px var(--shadow-hover);
+        .amenity-card-new::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, rgba(75, 226, 75, 0.05), transparent);
+            border-radius: 50%;
+            top: -75px;
+            right: -75px;
+            transition: all 0.5s ease;
         }
         
-        .amenity-card:hover:before {
-            height: 100%;
-            opacity: 0.05;
-            transition: height 0.4s ease;
+        .amenity-card-new:hover::after {
+            transform: scale(1.5);
         }
         
-        .amenity-icon {
-            font-size: 54px;
-            margin-bottom: 25px;
-            color: var(--ocean-blue);
-            transition: transform 0.5s ease, color 0.3s ease;
-        }
-        
-        .amenity-card:hover .amenity-icon {
-            transform: scale(1.2) rotate(5deg);
-            color: var(--coral);
-        }
-        
-        .amenity-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        
-        /* Testimonials Section */
+        /* Testimonials Section - Horizontal Layout */
         .testimonials-section {
-            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
-                        url('https://images.unsplash.com/photo-1514888286974-6d03bde4ba48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95));
+            padding: 100px 0;
+            overflow: hidden;
         }
         
-        .testimonials-slider {
+        .testimonials-container {
             max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            height: 350px;
+        }
+        
+        .testimonial-slider {
+            width: 100%;
+            height: 100%;
             position: relative;
             overflow: hidden;
         }
         
-        .testimonial-card {
-            background-color: white;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 15px 35px var(--shadow);
-            text-align: center;
-            margin: 0 20px;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
+        .testimonial-track {
+            display: flex;
+            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+            height: 100%;
         }
         
-        .testimonial-card.active {
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            transform: translateX(100px);
+            transition: all 0.8s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .testimonial-slide.active {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateX(0);
+            position: relative;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            position: relative;
+            border: 1px solid rgba(75, 226, 75, 0.1);
         }
         
         .testimonial-text {
@@ -530,7 +584,7 @@
         
         .testimonial-author {
             font-weight: 600;
-            color: var(--forest);
+            color: var(--ocean-blue); /* Changed to ocean blue */
             font-size: 20px;
             margin-bottom: 10px;
         }
@@ -560,6 +614,74 @@
         .testimonial-dot.active {
             background-color: var(--ocean-blue);
             transform: scale(1.3);
+        }
+        
+        .testimonial-prev, .testimonial-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            color: var(--ocean-blue);
+        }
+        
+        .testimonial-prev:hover, .testimonial-next:hover {
+            background: var(--ocean-blue);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .testimonial-prev {
+            left: -70px;
+        }
+        
+        .testimonial-next {
+            right: -70px;
+        }
+        
+        /* Map Section */
+        .map-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            height: 450px;
+            position: relative;
+        }
+        
+        .map-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .map-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        
+        .map-overlay h4 {
+            color: var(--ocean-blue);
+            margin-bottom: 5px;
         }
         
         /* Booking Section */
@@ -593,7 +715,7 @@
         .form-group label {
             display: block;
             margin-bottom: 10px;
-            color: var(--forest);
+            color: var(--ocean-blue); /* Changed to ocean blue */
             font-weight: 600;
             font-size: 16px;
         }
@@ -767,12 +889,20 @@
         
         /* Responsive Design */
         @media (max-width: 1200px) {
-            .amenities-grid {
+            .amenities-container {
                 grid-template-columns: repeat(2, 1fr);
             }
             
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .testimonial-prev {
+                left: 10px;
+            }
+            
+            .testimonial-next {
+                right: 10px;
             }
         }
         
@@ -822,7 +952,7 @@
                 grid-template-columns: 1fr;
             }
             
-            .amenities-grid {
+            .amenities-container {
                 grid-template-columns: 1fr;
             }
             
@@ -836,6 +966,11 @@
             
             .footer-content {
                 grid-template-columns: 1fr;
+            }
+            
+            .testimonial-prev, .testimonial-next {
+                width: 40px;
+                height: 40px;
             }
         }
         
@@ -859,6 +994,10 @@
             .testimonial-card {
                 padding: 30px 20px;
             }
+            
+            .map-container {
+                height: 350px;
+            }
         }
     </style>
 </head>
@@ -877,8 +1016,8 @@
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#amenities">Amenities</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#booking">Booking</a></li>
-                    <li><a href="#contact" class="book-now-btn">Book Now</a></li>
+                    <li><a href="#map">Location</a></li>
+                    <li><a href="#booking" class="book-now-btn">Book Now</a></li>
                 </ul>
             </nav>
         </div>
@@ -909,7 +1048,7 @@
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Vadanapilly Beach Villa">
+                    <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Beautiful Beach at Vadanapilly">
                 </div>
                 <div class="about-text">
                     <h3>Your Coastal Sanctuary Awaits</h3>
@@ -947,7 +1086,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1558036117-15e82a2c9a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Infinity Pool">
+                    <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Infinity Pool">
                     <div class="gallery-overlay">
                         <h4>Infinity Pool</h4>
                         <p>Overlooking the Arabian Sea</p>
@@ -978,51 +1117,51 @@
         </div>
     </section>
 
-    <!-- Amenities Section -->
-    <section class="section" id="amenities">
+    <!-- Premium Amenities Section -->
+    <section class="section amenities-section" id="amenities">
         <div class="container">
             <div class="section-title">
                 <h2>Premium Amenities</h2>
                 <p>Every detail crafted for your comfort and enjoyment</p>
             </div>
-            <div class="amenities-grid">
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+            <div class="amenities-container">
+                <div class="amenity-card-new">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-swimming-pool"></i>
                     </div>
                     <h3>Infinity Pool</h3>
                     <p>A stunning infinity-edge pool that appears to merge with the ocean horizon, with comfortable loungers and poolside service.</p>
                 </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                <div class="amenity-card-new">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-spa"></i>
                     </div>
                     <h3>Wellness Spa</h3>
                     <p>Authentic Ayurvedic treatments and wellness therapies in our serene spa overlooking the ocean.</p>
                 </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                <div class="amenity-card-new">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-utensils"></i>
                     </div>
                     <h3>Private Chef</h3>
                     <p>Enjoy customized culinary experiences with our private chef specializing in Kerala cuisine and international dishes.</p>
                 </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                <div class="amenity-card-new">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-water"></i>
                     </div>
                     <h3>Beach Access</h3>
                     <p>Direct, private access to pristine sandy beaches with complimentary sun loungers, umbrellas, and towels.</p>
                 </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                <div class="amenity-card-new">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-concierge-bell"></i>
                     </div>
                     <h3>24/7 Concierge</h3>
                     <p>Personalized concierge service to arrange excursions, transportation, and special experiences.</p>
                 </div>
-                <div class="amenity-card">
-                    <div class="amenity-icon">
+                <div class="amenity-card-new">
+                    <div class="amenity-icon-wrapper">
                         <i class="fas fa-wifi"></i>
                     </div>
                     <h3>High-Speed WiFi</h3>
@@ -1039,50 +1178,83 @@
                 <h2>Guest Experiences</h2>
                 <p>Discover what our guests say about their stay at Vadanapilly</p>
             </div>
-            <div class="testimonials-slider">
-                <div class="testimonial-card active">
-                    <div class="testimonial-text">
-                        Our stay at Vadanapilly Beach Villa was nothing short of magical. The attention to detail, breathtaking views, and exceptional service created the perfect vacation. Waking up to the sound of waves and enjoying sunset from our private balcony were moments we'll cherish forever.
-                    </div>
-                    <div class="testimonial-author">— Priya & Rajesh Kumar</div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+            <div class="testimonials-container">
+                <div class="testimonial-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div class="testimonial-slider">
+                    <div class="testimonial-track">
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-card">
+                                <div class="testimonial-text">
+                                    Our stay at Vadanapilly Beach Villa was nothing short of magical. The attention to detail, breathtaking views, and exceptional service created the perfect vacation. Waking up to the sound of waves and enjoying sunset from our private balcony were moments we'll cherish forever.
+                                </div>
+                                <div class="testimonial-author">— Priya & Rajesh Kumar</div>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-text">
+                                    The perfect blend of luxury and nature. The villa's design harmonizes so beautifully with its surroundings. The staff went above and beyond to make our anniversary special with a private dinner on the beach. We can't wait to return!
+                                </div>
+                                <div class="testimonial-author">— Thomas & Sarah Chen</div>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-text">
+                                    As a family with two young children, we appreciated how child-friendly the villa was while still maintaining its luxury feel. The infinity pool was a highlight, and the private beach meant we could relax while the kids played safely nearby. Truly a perfect family getaway!
+                                </div>
+                                <div class="testimonial-author">— The Fernandez Family</div>
+                                <div class="testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        The perfect blend of luxury and nature. The villa's design harmonizes so beautifully with its surroundings. The staff went above and beyond to make our anniversary special with a private dinner on the beach. We can't wait to return!
-                    </div>
-                    <div class="testimonial-author">— Thomas & Sarah Chen</div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-text">
-                        As a family with two young children, we appreciated how child-friendly the villa was while still maintaining its luxury feel. The infinity pool was a highlight, and the private beach meant we could relax while the kids played safely nearby.
-                    </div>
-                    <div class="testimonial-author">— The Fernandez Family</div>
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
+                <div class="testimonial-next">
+                    <i class="fas fa-chevron-right"></i>
                 </div>
                 <div class="testimonial-nav">
                     <div class="testimonial-dot active" data-index="0"></div>
                     <div class="testimonial-dot" data-index="1"></div>
                     <div class="testimonial-dot" data-index="2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section map-section" id="map">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+                <p>Find us in the heart of Kerala's beautiful coastline</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.132833470483!2d76.17245697498143!3d10.013924490074336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b081a8c93358ddb%3A0x94574809c0e5f4f1!2sVadanappally%20Beach%20Road%2C%20Vadanappally%2C%20Kerala%20680569%2C%20India!5e0!3m2!1sen!2sus!4v1698765432100!5m2!1sen!2sus" class="map-iframe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-overlay">
+                    <h4>Vadanapilly Beach Villa</h4>
+                    <p>Vadanappally Beach Road, Kerala 680569</p>
                 </div>
             </div>
         </div>
@@ -1160,6 +1332,7 @@
                         <li><a href="#gallery">Gallery</a></li>
                         <li><a href="#amenities">Amenities</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#map">Location</a></li>
                         <li><a href="#booking">Booking</a></li>
                     </ul>
                 </div>
@@ -1168,7 +1341,7 @@
                     <ul class="contact-info">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Vadanapilly Beach Road, Thrissur,<br>Kerala 680567, India</span>
+                            <span>Vadanappally Beach Road, Thrissur,<br>Kerala 680569, India</span>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
@@ -1225,32 +1398,67 @@
             animateOnScroll();
         });
         
-        // Testimonials Slider
-        const testimonialCards = document.querySelectorAll('.testimonial-card');
+        // Testimonials Slider - Horizontal Animation
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
         const testimonialDots = document.querySelectorAll('.testimonial-dot');
-        let currentTestimonial = 0;
+        const prevBtn = document.querySelector('.testimonial-prev');
+        const nextBtn = document.querySelector('.testimonial-next');
+        let currentSlide = 0;
         
-        function showTestimonial(index) {
-            testimonialCards.forEach(card => card.classList.remove('active'));
-            testimonialDots.forEach(dot => dot.classList.remove('active'));
+        function showSlide(index) {
+            // Wrap around if at boundaries
+            if (index >= testimonialSlides.length) index = 0;
+            if (index < 0) index = testimonialSlides.length - 1;
             
-            testimonialCards[index].classList.add('active');
+            // Hide all slides
+            testimonialSlides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Show current slide
+            testimonialSlides[index].classList.add('active');
+            
+            // Update dots
+            testimonialDots.forEach(dot => dot.classList.remove('active'));
             testimonialDots[index].classList.add('active');
-            currentTestimonial = index;
+            
+            currentSlide = index;
         }
         
+        // Next button
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+        
+        // Previous button
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+        
+        // Dot navigation
         testimonialDots.forEach(dot => {
             dot.addEventListener('click', function() {
                 const index = parseInt(this.getAttribute('data-index'));
-                showTestimonial(index);
+                showSlide(index);
             });
         });
         
         // Auto-rotate testimonials
-        setInterval(() => {
-            let nextIndex = (currentTestimonial + 1) % testimonialCards.length;
-            showTestimonial(nextIndex);
+        let slideInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
         }, 5000);
+        
+        // Pause auto-rotation on hover
+        const sliderContainer = document.querySelector('.testimonials-container');
+        sliderContainer.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        sliderContainer.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(() => {
+                showSlide(currentSlide + 1);
+            }, 5000);
+        });
         
         // Booking Form Handling
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
@@ -1331,7 +1539,7 @@
         
         // Animation on scroll function
         function animateOnScroll() {
-            const elements = document.querySelectorAll('.amenity-card, .gallery-item, .section-title');
+            const elements = document.querySelectorAll('.amenity-card-new, .gallery-item, .section-title');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
@@ -1345,7 +1553,7 @@
         }
         
         // Initialize animation styles
-        document.querySelectorAll('.amenity-card, .gallery-item').forEach(element => {
+        document.querySelectorAll('.amenity-card-new, .gallery-item').forEach(element => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(30px)';
             element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -1354,6 +1562,8 @@
         // Initial animation on page load
         window.addEventListener('load', () => {
             animateOnScroll();
+            // Initialize testimonial slider
+            showSlide(0);
         });
     </script>
 </body>
