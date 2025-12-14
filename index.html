@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beach Villa Paradise</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER / NAV -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="logo">BeachVilla</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#amenities">Amenities</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="book-btn">Book Now</button>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Sun, Sea & Serenity</h1>
+            <p>Your perfect beachside escape starts here.</p>
+            <button onclick="scrollToSection('booking')">Reserve Your Stay</button>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <h2>About Our Villa</h2>
+        <p>Experience beachfront luxury with panoramic sea views, elegant interiors, and unmatched comfort. Our villa offers spacious rooms, private pools, and premium amenities for an unforgettable holiday.</p>
+        <img src="images/villa-about.jpg" alt="Aesthetic villa shot" />
+    </section>
+
+    <!-- AMENITIES -->
+    <section id="amenities" class="amenities-section">
+        <h2>What We Offer</h2>
+        <div class="amenity-cards">
+            <div class="card"><img src="images/icons/pool.png" alt="Pool"><h3>Private Pool</h3></div>
+            <div class="card"><img src="images/icons/beach.png" alt="Beach"><h3>Beach Access</h3></div>
+            <div class="card"><img src="images/icons/wifi.png" alt="WiFi"><h3>Free Wi-Fi</h3></div>
+            <div class="card"><img src="images/icons/dining.png" alt="Dining"><h3>Gourmet Dining</h3></div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="gallery-section">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="images/gallery1.jpg" alt="Beach villa interior">
+            <img src="images/gallery2.jpg" alt="Ocean sunset view">
+            <img src="images/gallery3.jpg" alt="Private pool view">
+            <img src="images/gallery4.jpg" alt="Aesthetic beach shot">
+        </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="booking-section">
+        <h2>Book Your Stay</h2>
+        <form id="bookingForm" class="booking-form">
+            <input type="text" placeholder="Full Name" required name="name" />
+            <input type="email" placeholder="Email Address" required name="email" />
+            <input type="date" placeholder="Check-In" required name="checkin" />
+            <input type="date" placeholder="Check-Out" required name="checkout" />
+            <input type="number" placeholder="Guests" min="1" max="10" name="guests" />
+            <button type="submit">Submit Request</button>
+        </form>
+        <p class="booking-msg" id="bookingMsg"></p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Email: hello@beachvilla.com | Phone: +91 98765 43210</p>
+    </section>
+
+    <footer class="site-footer">
+        <small>&copy; 2025 Beach Villa Paradise</small>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
