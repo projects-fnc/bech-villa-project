@@ -1,11 +1,9 @@
-// Smooth Scroll
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
-}
-
-// Booking form handling (dummy)
-document.getElementById("bookingForm").addEventListener("submit", function (e) {
+// Smooth scroll nav
+document.querySelectorAll('.nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
     e.preventDefault();
-    document.getElementById("bookingMsg").textContent =
-        "Thank you! Your booking request is submitted. We'll contact you soon.";
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
 });
